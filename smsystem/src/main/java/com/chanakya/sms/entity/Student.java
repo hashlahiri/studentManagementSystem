@@ -1,5 +1,8 @@
 package com.chanakya.sms.entity;
 
+import java.sql.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +17,16 @@ public class Student {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long studentId;
+	@Column(name="student_no")
+	private int studentNo;
 
-	private String studentFirstName;
+	@Column(name="student_name")
+	private String studentName;
 
-	private String studentLastName;
+	@Column(name="student_dob")
+	private Date studentDob;
 
-	private String studentEmail;
-
-	private String studentVaccineStatus;
+	@Column(name="student_doj")
+	private Date studentDoj;
 
 }

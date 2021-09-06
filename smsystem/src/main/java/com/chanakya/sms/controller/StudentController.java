@@ -83,10 +83,9 @@ public class StudentController {
 		if (theStudent == null) {
 			throw new RuntimeException("Student not found hence not updated");
 		} else {
-			theStudent.setStudentFirstName(newStudent.getStudentFirstName());
-			theStudent.setStudentLastName(newStudent.getStudentLastName());
-			theStudent.setStudentEmail(newStudent.getStudentEmail());
-			theStudent.setStudentVaccineStatus(newStudent.getStudentVaccineStatus());
+			theStudent.setStudentName(newStudent.getStudentName());
+			theStudent.setStudentDob(newStudent.getStudentDob());
+			theStudent.setStudentDoj(newStudent.getStudentDoj());
 
 			boolean updateStatus = studentService.save(theStudent);
 

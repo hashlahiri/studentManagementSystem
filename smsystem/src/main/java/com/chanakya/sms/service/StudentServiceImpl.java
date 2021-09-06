@@ -48,7 +48,7 @@ public class StudentServiceImpl implements StudentService {
 		// adding the student in database
 		theStudent = studentRepository.save(theStudent);
 
-		if (theStudent != null && theStudent.getStudentId() > 0) {
+		if (theStudent != null && theStudent.getStudentNo() > 0) {
 			return true;
 		}
 		return false;
