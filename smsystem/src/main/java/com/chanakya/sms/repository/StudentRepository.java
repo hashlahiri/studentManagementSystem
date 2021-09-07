@@ -9,9 +9,9 @@ import com.chanakya.sms.entity.Student;
 
 //used jpa for help related to CRUD operations, reducing complexity and boiler plate code
 @Repository
-public interface StudentRepository extends JpaRepository<Student, Long> {
+public interface StudentRepository extends JpaRepository<Student, Integer> {
 
 	// adding a method to sort it out by lastName of students
-	public List<Student> findAllByOrderByLastNameAsc();
+	public List<Student> findAllByOrderByStudentNameAsc();
 
 }

@@ -10,12 +10,12 @@ public interface StudentService {
 	public List<Student> findAll();
 
 	// to find the students by their id
-	public Student findById(long theId);
+	public Student findById(int theId);
 
 	// to save the students
 	public boolean save(Student theStudent);
 
 	// to delete a student
-	public void deleteById(long theId);
+	public void deleteById(int theId);
 
 }

@@ -23,11 +23,11 @@ public class StudentServiceImpl implements StudentService {
 	public List<Student> findAll() {
 
 		// returns a list of all students
-		return studentRepository.findAllByOrderByLastNameAsc();
+		return studentRepository.findAllByOrderByStudentNameAsc();
 	}
 
 	@Override
-	public Student findById(long theId) {
+	public Student findById(int theId) {
 
 		// to handle crud repository results
 		Optional<Student> result = studentRepository.findById(theId);
@@ -55,7 +55,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public void deleteById(long theId) {
+	public void deleteById(int theId) {
 		// deleting the student
 		studentRepository.deleteById(theId);
 	}

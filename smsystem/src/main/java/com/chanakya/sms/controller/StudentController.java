@@ -78,7 +78,7 @@ public class StudentController {
 	@PutMapping("/updateStudentById/{id}")
 	public ResponseEntity<?> updateStudentById(@RequestBody Student newStudent, @PathVariable String id) {
 		// get student from service layer
-		Student theStudent = studentService.findById(Long.parseLong(id));
+		Student theStudent = studentService.findById(Integer.parseInt(id));
 
 		if (theStudent == null) {
 			throw new RuntimeException("Student not found hence not updated");
@@ -105,12 +105,12 @@ public class StudentController {
 	public ResponseEntity<?> deleteStudent(@PathVariable String id) {
 
 		// get student credentials
-		Student theStudent = studentService.findById(Long.parseLong(id));
+		Student theStudent = studentService.findById(Integer.parseInt(id));
 
 		if (theStudent == null) {
 			throw new RuntimeException("Student not found, hence not deleted");
 		} else {
-			studentService.deleteById(Long.parseLong(id));
+			studentService.deleteById(Integer.parseInt(id));
 
 			HashMap<String, Object> responseMap = new HashMap<>();
 			responseMap.put("status", "SUCCESS");
