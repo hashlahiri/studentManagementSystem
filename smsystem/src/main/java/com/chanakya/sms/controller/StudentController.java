@@ -114,7 +114,7 @@ public class StudentController {
 
 			HashMap<String, Object> responseMap = new HashMap<>();
 			responseMap.put("status", "SUCCESS");
-			responseMap.put("message", "Student deleted successufully");
+			responseMap.put("message", "Student deleted successfully");
 
 			return new ResponseEntity<>(responseMap, HttpStatus.OK);
 		}
